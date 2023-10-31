@@ -1,0 +1,21 @@
+props?
+컴포넌트끼리의 정보 교환방식, 데이터 교환 방식
+부모 컴포넌트에서 자식 컴포넌트의 방향으로 값을 내려준다.
+읽기 전용방식으로 변경 불가능하다.
+///
+function Son({ grandFatherName }) {
+  return <div>나는 {grandFatherName} 손자에요!</div>;
+}
+function Mother({ grandFatherName }) {
+  return <Son grandFatherName={grandFatherName} />;
+}
+function GrandFather() {
+  const name = "흥할아버지";
+  return <Mother grandFatherName={name} />;
+}
+function App() {
+  return <GrandFather />;
+}
+
+단 props 드릴링에 유의
+중간 다리 역할의 컴포넌트가 많을 때를 지칭

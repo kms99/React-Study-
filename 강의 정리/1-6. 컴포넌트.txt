@@ -1,0 +1,43 @@
+리액트 컴포넌트?
+재사용 가능한 UI
+각 조각을 개별적으로 살펴볼 수 있다.
+
+props 라는 input을 받고 React 엘리먼트를 반환
+
+1. 함수형 컴포넌트
+2. 클래스형 컴포넌트
+
+우리가 사용할 컴포넌트는 함수형 컴포넌트
+why? 공식적으로 권장하는 방법, 쉽다
+
+함수형 컴포넌트의 구조
+
+// import 영역
+import logo from "./logo.svg";
+import "./App.css";
+
+function App() { // 컴포넌트의 이름은 무조건 대문자로 시작
+    //javascript 영역
+  return (
+    //jsx 영역
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+// export 영역
+export default App;
